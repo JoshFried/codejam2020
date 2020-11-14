@@ -13,7 +13,7 @@ const RatingUI = () => {
         <Rating
           name="simple-controlled"
           value={ratingValue}
-          onChange={(event, ratingNewValue: number | null) => {
+          onChange={(_event, ratingNewValue: number | null) => {
             setRatingValue(ratingNewValue);
           }}
         />
