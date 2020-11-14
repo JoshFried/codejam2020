@@ -25,6 +25,9 @@ const useStyles = makeStyles({
     textAlign: "start",
     border: "2px solid black",
     margin: "0.5rem 0rem",
+    display: "flex",
+    flexDirection: "column",
+    paddingLeft: "1rem",
   },
   title: {
     fontSize: 14,

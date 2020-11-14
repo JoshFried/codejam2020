@@ -9,7 +9,9 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       display: "flex",
+      flexDirection: "column",
       justifyContent: "center",
+      alignItems: "center",
       backgroundColor: "#9AC7BF",
       minHeight: "100vh",
     },
@@ -20,6 +22,23 @@ const useStyles = makeStyles((theme: Theme) =>
       flexDirection: "column",
       width: "80%",
       marginTop: "2rem",
+      display: "flex",
+      justifyContent: "center",
+    },
+    businessdisplay: {
+      width: "100%",
+    },
+    "@global": {
+      "*::-webkit-scrollbar": {
+        width: "0.4em",
+      },
+      "*::-webkit-scrollbar-track": {
+        "-webkit-box-shadow": "inset 0 0 6px rgba(0,0,0,0.00)",
+      },
+      "*::-webkit-scrollbar-thumb": {
+        backgroundColor: "rgba(0,0,0,.1)",
+        outline: "1px solid slategrey",
+      },
     },
   })
 );
@@ -35,6 +54,8 @@ const App = (): JSX.Element => {
           <Explanation></Explanation>
           <Searchbox></Searchbox>
           <br></br>
+        </div>
+        <div className={classes.businessdisplay}>
           <AllBusiness />
         </div>
       </div>
