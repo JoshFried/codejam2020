@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from "react";
-import Header from "./Component/Header/Header";
+import React from "react";
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
-import Button from "@material-ui/core/Button";
 import Searchbox from "./Component/Header/Searchbox";
 import MenuAppBar from "./Component/Header/MenuAppBar";
 import Explanation from "./Component/Header/Explanation";
