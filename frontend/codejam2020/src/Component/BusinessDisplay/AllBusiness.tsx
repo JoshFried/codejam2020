@@ -14,9 +14,11 @@ const useStyles = makeStyles((theme: Theme) =>
       overflow: "hidden",
       backgroundColor: theme.palette.background.paper,
     },
-    container: {
-      width: "90%",
-      height: "auto",
+    gridList: {
+      width: 500,
+      height: 450,
+      // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
+      transform: "translateZ(0)",
     },
     gridListTile: {
       width: "100%",
@@ -171,14 +173,12 @@ const AllBusiness = () => {
   ];
   const classes = useStyles();
   return (
-    <div>
-      <Grid direction="column" container spacing={3}>
-        {businesses.map((business) => {
-          <Grid item xs={12}>
-            <BusinessCard businessInfo={business} />
-          </Grid>;
+    <div className={classes.root}>
+      <GridList cellHeight={200} spacing={1} className={classes.gridList}>
+        {businesses.map((business, i) => {
+          return <BusinessCard businessInfo={business}></BusinessCard>;
         })}
-      </Grid>
+      </GridList>
     </div>
   );
 };
