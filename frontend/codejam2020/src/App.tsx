@@ -4,6 +4,7 @@ import Searchbox from "./Component/Header/Searchbox";
 import MenuAppBar from "./Component/Header/MenuAppBar";
 import Explanation from "./Component/Header/Explanation";
 import AllBusiness from "./Component/BusinessDisplay/AllBusiness";
+import BusinessCard from "./Component/BusinessDisplay/BusinessCard";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -35,7 +36,7 @@ const App = (): JSX.Element => {
           <Explanation></Explanation>
           <Searchbox></Searchbox>
           <br></br>
-          <AllBusiness />
+          <AllBusiness/>
         </div>
       </div>
     </div>

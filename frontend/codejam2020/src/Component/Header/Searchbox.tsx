@@ -34,7 +34,7 @@ const Searchbox = () => {
       <form className={classes.root} noValidate autoComplete="off">
         <TextField
           id="outlined-basic"
-          label="Search restaurants, stores, businesses..."
+          label="Search a business.."
           variant="outlined"
           value={searchValue}
           onChange={changeValue}
