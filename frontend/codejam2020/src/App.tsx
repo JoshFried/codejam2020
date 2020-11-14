@@ -3,6 +3,7 @@ import "./App.css";
 import Header from "./Component/Header/Header";
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
+import Searchbox from "./Component/Header/Searchbox";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -15,24 +16,11 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 const App = (): JSX.Element => {
-  const [something, setSomething] = useState<number>(0);
-
-  const changeSomething = () => {
-    setSomething(2.5);
-  };
-
   const classes = useStyles();
   return (
     <div className="App">
       <header className="App-header">
-        <Header someNumber={something} someSecondString="im a string"></Header>
-        <div className={classes.root}>
-          {something}
-          <Button variant="contained" color="primary" onClick={changeSomething}>
-            click me
-          </Button>
-          <div>{something}</div>
-        </div>
+        <Searchbox></Searchbox>
       </header>
     </div>
   );
