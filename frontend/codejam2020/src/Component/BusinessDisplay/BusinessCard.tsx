@@ -12,7 +12,10 @@ interface Props {
 }
 const BusinessCard: React.FC<Props> = ({ businessInfo }) => {
   return (
-    <Paper style={{ width: "100%", height: "2rem" }}>{businessInfo.name}</Paper>
+    <Paper style={{ width: "100%", height: "2rem" }}>
+      {console.log(businessInfo)}
+      {businessInfo.name}
+    </Paper>
   );
 };
 

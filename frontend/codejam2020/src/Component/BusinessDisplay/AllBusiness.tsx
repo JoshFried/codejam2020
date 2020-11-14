@@ -15,7 +15,8 @@ const useStyles = makeStyles((theme: Theme) =>
       backgroundColor: theme.palette.background.paper,
     },
     container: {
-      flexGrow: 1,
+      width: "90%",
+      height: "auto",
     },
     gridListTile: {
       width: "100%",
@@ -170,8 +171,8 @@ const AllBusiness = () => {
   ];
   const classes = useStyles();
   return (
-    <div className={classes.container}>
-      <Grid container spacing={3}>
+    <div>
+      <Grid direction="column" container spacing={3}>
         {businesses.map((business) => {
           <Grid item xs={12}>
             <BusinessCard businessInfo={business} />
