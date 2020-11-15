@@ -26,6 +26,7 @@ interface Props {
     ratingLimitingCustomers: number;
     ratingMasks: number;
     ratingAccomodation: number;
+    link: string;
   };
 }
 

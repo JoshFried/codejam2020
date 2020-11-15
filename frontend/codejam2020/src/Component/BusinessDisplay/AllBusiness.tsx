@@ -45,6 +45,7 @@ const AllBusiness: React.FC<Props> = ({ filterValue }) => {
       ratingLimitingCustomers: 5,
       ratingMasks: 4,
       ratingAccomodation: 3,
+      link: "https://www.google.ca/maps/place/Provigo/@45.4931606,-73.6814565,12z/data=!4m8!1m2!2m1!1sprovigo!3m4!1s0x0:0xfe5e6e74c66326a8!8m2!3d45.508753!4d-73.5717702",
     },
     {
       name: "Provigo",
@@ -59,6 +60,7 @@ const AllBusiness: React.FC<Props> = ({ filterValue }) => {
       ratingLimitingCustomers: 4,
       ratingMasks: 4,
       ratingAccomodation: 3,
+      link: "https://www.google.ca/maps/place/Provigo/@45.4933585,-73.6814566,12z/data=!4m8!1m2!2m1!1sprovigo!3m4!1s0x0:0xbfe191fc5c9a5579!8m2!3d45.518722!4d-73.5867906",
     },
     {
       name: "Provigo",
@@ -74,6 +76,7 @@ const AllBusiness: React.FC<Props> = ({ filterValue }) => {
       ratingLimitingCustomers: 4,
       ratingMasks: 4,
       ratingAccomodation: 3,
+      link: "https://www.google.ca/maps/place/Provigo/@45.4933585,-73.6814566,12z/data=!4m8!1m2!2m1!1sprovigo!3m4!1s0x0:0x694d628d77b62e2c!8m2!3d45.4963607!4d-73.57059",
     },
     {
       name: "Metro",
@@ -88,6 +91,7 @@ const AllBusiness: React.FC<Props> = ({ filterValue }) => {
       ratingLimitingCustomers: 4,
       ratingMasks: 2,
       ratingAccomodation: 4,
+      link: "https://www.google.ca/maps/place/Metro+Avenue+du+Parc/@45.4935563,-73.6814567,12z/data=!4m8!1m2!2m1!1smetro+supermarket!3m4!1s0x0:0xe29b20c6408f8e5e!8m2!3d45.5103319!4d-73.5750318",
     },
     {
       name: "Epicerie Segal",
@@ -102,6 +106,7 @@ const AllBusiness: React.FC<Props> = ({ filterValue }) => {
       ratingLimitingCustomers: 3,
       ratingMasks: 2,
       ratingAccomodation: 2,
+      link: "https://www.google.ca/maps/place/Segal's+Market/@45.5168729,-73.5810382,17z/data=!3m2!4b1!5s0x4cc91a334ae2c6c7:0xf719ebca96f15a10!4m5!3m4!1s0x4cc91a3349927b97:0xd2b307f24c5c29c3!8m2!3d45.5168692!4d-73.5788495",
     },
     {
       name: "La Banquise",
@@ -116,6 +121,7 @@ const AllBusiness: React.FC<Props> = ({ filterValue }) => {
       ratingLimitingCustomers: 5,
       ratingMasks: 4,
       ratingAccomodation: 3,
+      link: "https://www.google.ca/maps/place/La+Banquise/@45.525352,-73.5769467,17z/data=!3m1!4b1!4m5!3m4!1s0x4cc91bcf6fd7097f:0x8fb883c1e73fdf11!8m2!3d45.5253483!4d-73.5747581",
     },
     {
       name: "A&W",
@@ -130,6 +136,7 @@ const AllBusiness: React.FC<Props> = ({ filterValue }) => {
       ratingLimitingCustomers: 3,
       ratingMasks: 4,
       ratingAccomodation: 4,
+      link: "https://www.google.ca/maps/place/A%26W+Canada/@45.5152789,-73.5846448,15z/data=!4m8!1m2!2m1!1zYSZ3!3m4!1s0x0:0x55859f5fd4385de4!8m2!3d45.5152789!4d-73.5758901",
     },
     {
       name: "A&W",
@@ -144,6 +151,7 @@ const AllBusiness: React.FC<Props> = ({ filterValue }) => {
       ratingLimitingCustomers: 4,
       ratingMasks: 1,
       ratingAccomodation: 4,
+      link: "https://www.google.ca/maps/place/A%26W+Canada/@45.507221,-73.5806295,15z/data=!4m8!1m2!2m1!1zYSZ3!3m4!1s0x0:0x6d8a169a8f493c9b!8m2!3d45.5073526!4d-73.5649922",
     },
     {
       name: "3 Brasseurs",
@@ -158,6 +166,7 @@ const AllBusiness: React.FC<Props> = ({ filterValue }) => {
       ratingLimitingCustomers: 4,
       ratingMasks: 2,
       ratingAccomodation: 5,
+      link: "https://www.google.ca/maps/place/3+Brasseurs+Saint-Denis/@45.5094158,-73.5745356,15z/data=!4m8!1m2!2m1!1s3+brasseurs!3m4!1s0x0:0x9e7c7df9de66da87!8m2!3d45.5149218!4d-73.5635492",
     },
     {
       name: "McDonald's",
@@ -172,6 +181,7 @@ const AllBusiness: React.FC<Props> = ({ filterValue }) => {
       ratingLimitingCustomers: 1,
       ratingMasks: 2,
       ratingAccomodation: 1,
+      link: "https://www.google.ca/maps/place/McDonald's/@45.5152263,-73.5655162,17z/data=!3m1!4b1!4m5!3m4!1s0x4cc91bb34996d1f5:0x156d8136a7ca37bc!8m2!3d45.5152226!4d-73.5633275",
     },
     {
       name: "Pizza Pizza",
@@ -186,6 +196,7 @@ const AllBusiness: React.FC<Props> = ({ filterValue }) => {
       ratingLimitingCustomers: 3,
       ratingMasks: 3,
       ratingAccomodation: 4,
+      link: "https://www.google.ca/maps/place/Pizza+Pizza/@45.5146695,-73.5767711,17z/data=!3m1!4b1!4m5!3m4!1s0x4cc91a4a5bbaeff1:0x316e0c3c25b54577!8m2!3d45.5146658!4d-73.5745824",
     },
     {
       name: "Decathlon",
@@ -200,6 +211,7 @@ const AllBusiness: React.FC<Props> = ({ filterValue }) => {
       ratingLimitingCustomers: 4,
       ratingMasks: 5,
       ratingAccomodation: 4,
+      link: "https://www.google.ca/maps/place/D%C3%A9cathlon+Centre+Eaton/@45.5024697,-73.5734928,17z/data=!3m1!4b1!4m5!3m4!1s0x4cc91bce4bcbcd69:0x8f57ccc3b562e141!8m2!3d45.502466!4d-73.5713041",
     },
     {
       name: "Gap",
@@ -214,6 +226,7 @@ const AllBusiness: React.FC<Props> = ({ filterValue }) => {
       ratingLimitingCustomers: 2,
       ratingMasks: 3,
       ratingAccomodation: 5,
+      link: "https://www.google.ca/maps/place/Gap/@45.5024697,-73.5734928,17z/data=!3m2!4b1!5s0x4cc91a44229c134d:0x1e314697dfe9f2e4!4m5!3m4!1s0x4cc91a44467f13db:0x90e205897712c464!8m2!3d45.502466!4d-73.5713041",
     },
     {
       name: "H&M",
@@ -228,6 +241,7 @@ const AllBusiness: React.FC<Props> = ({ filterValue }) => {
       ratingLimitingCustomers: 3,
       ratingMasks: 3,
       ratingAccomodation: 2,
+      link: "https://www.google.ca/maps/place/H%26M/@45.505188,-73.5698286,17z/data=!3m1!4b1!4m5!3m4!1s0x4cc91a458342327d:0xe9f3ce26b9219041!8m2!3d45.5051843!4d-73.5676399",
     },
     {
       name: "Sports Experts",
@@ -242,6 +256,7 @@ const AllBusiness: React.FC<Props> = ({ filterValue }) => {
       ratingLimitingCustomers: 3,
       ratingMasks: 3,
       ratingAccomodation: 2,
+      link: "https://www.google.ca/maps/place/Sports+Experts/@45.5052907,-73.63768,12z/data=!4m8!1m2!2m1!1ssports+experts!3m4!1s0x0:0x7f92faf64983f59d!8m2!3d45.5014142!4d-73.5713196",
     },
     {
       name: "Bagels St-Viateur",
@@ -256,6 +271,7 @@ const AllBusiness: React.FC<Props> = ({ filterValue }) => {
       ratingLimitingCustomers: 3,
       ratingMasks: 2,
       ratingAccomodation: 4,
+      link: "https://www.google.ca/maps/place/Bagels+St-Viateur/@45.5237615,-73.6028158,17z/data=!3m1!4b1!4m5!3m4!1s0x4cc9197937b5d22b:0x2f487d6737a39e88!8m2!3d45.5237578!4d-73.6006271",
     },
     {
       name: "Fairmount Bagel",
@@ -270,6 +286,7 @@ const AllBusiness: React.FC<Props> = ({ filterValue }) => {
       ratingLimitingCustomers: 3,
       ratingMasks: 5,
       ratingAccomodation: 3,
+      link: "https://www.google.ca/maps/place/Fairmount+Bagel/@45.5228814,-73.5973592,17z/data=!3m1!4b1!4m5!3m4!1s0x4cc9197e3ee6bfe7:0xd247976570d63cad!8m2!3d45.5228777!4d-73.5951705",
     },
     {
       name: "Cafe Olimpico",
@@ -284,6 +301,7 @@ const AllBusiness: React.FC<Props> = ({ filterValue }) => {
       ratingLimitingCustomers: 5,
       ratingMasks: 2,
       ratingAccomodation: 1,
+      link: "https://www.google.ca/maps/place/Caf%C3%A9+Olimpico+-+Mile+End/@45.524124,-73.6024389,17z/data=!3m1!4b1!4m5!3m4!1s0x4cc9197949885067:0xbaf85bce3cee2770!8m2!3d45.5241203!4d-73.6002502",
     },
     {
       name: "Sushi Momo Végétalien",
@@ -298,6 +316,7 @@ const AllBusiness: React.FC<Props> = ({ filterValue }) => {
       ratingLimitingCustomers: 3,
       ratingMasks: 5,
       ratingAccomodation: 5,
+      link: "https://www.google.ca/maps/place/Sushi+Momo+V%C3%A9g%C3%A9talien/@45.5181157,-73.5716837,17z/data=!3m1!4b1!4m5!3m4!1s0x4cc91bcccb2e33ff:0xe8658ffe7e1823d6!8m2!3d45.518112!4d-73.569495",
     },
     {
       name: "Starbucks",
@@ -312,6 +331,7 @@ const AllBusiness: React.FC<Props> = ({ filterValue }) => {
       ratingLimitingCustomers: 2,
       ratingMasks: 4,
       ratingAccomodation: 3,
+      link: "https://www.google.ca/maps/place/Starbucks/@45.5140748,-73.5748283,17z/data=!3m1!4b1!4m5!3m4!1s0x4cc91a357ea75d0f:0x89c31467e3a6442c!8m2!3d45.5140711!4d-73.5726396",
     },
     {
       name: "Mae Sri",
@@ -326,7 +346,7 @@ const AllBusiness: React.FC<Props> = ({ filterValue }) => {
       ratingLimitingCustomers: 5,
       ratingMasks: 3,
       ratingAccomodation: 5, 
-
+      link: "https://www.google.ca/maps/place/Mae+Sri+Comptoir+Thai/@45.5104077,-73.5748658,17z/data=!3m1!4b1!4m5!3m4!1s0x4cc91b0474d4d47f:0x672c216e0221c0b7!8m2!3d45.510404!4d-73.5726771",
     },
     {
       name: "Brigade Napolitaine",
@@ -341,6 +361,7 @@ const AllBusiness: React.FC<Props> = ({ filterValue }) => {
       ratingLimitingCustomers: 5,
       ratingMasks: 4,
       ratingAccomodation: 5, 
+      link: "https://www.google.ca/maps/place/Brigade+Pizzeria+Napolitaine/@45.4995432,-73.5766301,17z/data=!3m1!4b1!4m5!3m4!1s0x4cc91a417f2ec02f:0xec88d8ab86f6a6ff!8m2!3d45.4995395!4d-73.5744415",
     },
     {
       name: "Carlos & Pepe's",
@@ -355,6 +376,7 @@ const AllBusiness: React.FC<Props> = ({ filterValue }) => {
       ratingLimitingCustomers: 5,
       ratingMasks: 4,
       ratingAccomodation: 4, 
+      link: "https://www.google.ca/maps/place/Carlos+%26+Pepe's+(Montreal)/@45.5001296,-73.5758734,17z/data=!3m1!4b1!4m5!3m4!1s0x4cc91a43d8dedc2b:0xc1311e7285cde8e2!8m2!3d45.5001259!4d-73.5736847",
     },
     {
       name: "Lola Rosa",
@@ -369,6 +391,7 @@ const AllBusiness: React.FC<Props> = ({ filterValue }) => {
       ratingLimitingCustomers: 3,
       ratingMasks: 5,
       ratingAccomodation: 3, 
+      link: "https://www.google.ca/maps/place/Lola+Rosa+Caf%C3%A9/@45.5073115,-73.5779713,17z/data=!3m1!4b1!4m5!3m4!1s0x4cc91a48043e71a5:0x79424bd690c3c709!8m2!3d45.5073078!4d-73.5757826",
     },
     {
       name: "Tacos Tin Tan",
@@ -382,7 +405,8 @@ const AllBusiness: React.FC<Props> = ({ filterValue }) => {
       ratingSocialDistancing: 3,
       ratingLimitingCustomers: 4,
       ratingMasks: 5,
-      ratingAccomodation: 4, 
+      ratingAccomodation: 4,
+      link: "https://www.google.ca/maps/place/Tacos+Tin+Tan/@45.5193774,-73.5754461,17z/data=!3m1!4b1!4m5!3m4!1s0x4cc91bcbaf739b35:0xd0a613bb8935b98!8m2!3d45.5193737!4d-73.5732574",
     },
     {
       name: "Bagels Etc",
@@ -397,6 +421,7 @@ const AllBusiness: React.FC<Props> = ({ filterValue }) => {
       ratingLimitingCustomers: 3,
       ratingMasks: 4,
       ratingAccomodation: 4,
+      link: "https://www.google.ca/maps/place/Bagel+Etc/@45.5188926,-73.5860776,17z/data=!3m1!4b1!4m5!3m4!1s0x4cc91bd2bd0ef6a7:0x2a477d5af2774534!8m2!3d45.5188889!4d-73.5838889",
     },
     {
       name: "Cafe Santropol",
@@ -411,9 +436,10 @@ const AllBusiness: React.FC<Props> = ({ filterValue }) => {
       ratingLimitingCustomers: 5,
       ratingMasks: 4,
       ratingAccomodation: 4,
+      link: "https://www.google.ca/maps/place/Caf%C3%A9+Santropol/@45.5155815,-73.5826945,17z/data=!3m1!4b1!4m5!3m4!1s0x4cc91a33109af0d7:0x88f020b276b42770!8m2!3d45.5155778!4d-73.5805058",
     },
     {
-      name: "Omnivor",
+      name: "Omnivore",
       rating: 4,
       count: 992,
       location: "4306 Boul St-Laurent, Montréal, QC H2W 1Z3, Canada",
@@ -425,6 +451,7 @@ const AllBusiness: React.FC<Props> = ({ filterValue }) => {
       ratingLimitingCustomers: 4,
       ratingMasks: 5,
       ratingAccomodation: 4,
+      link: "https://www.google.ca/maps/place/Omnivore/@45.5187679,-73.5858372,17z/data=!3m1!4b1!4m5!3m4!1s0x4cc91bd295a6780d:0xf4146a1a26e4e843!8m2!3d45.5187642!4d-73.5836485",
     },
     {
       name: "Dirty Dogs",
@@ -439,6 +466,7 @@ const AllBusiness: React.FC<Props> = ({ filterValue }) => {
       ratingLimitingCustomers: 4,
       ratingMasks: 3,
       ratingAccomodation: 5,
+      link: "https://www.google.ca/maps/place/Dirty+Dogs/@45.5147277,-73.5763017,17z/data=!3m1!4b1!4m5!3m4!1s0x4cc91a3511a21f3d:0xbe7e98f5c8fa8682!8m2!3d45.514724!4d-73.574113",
     },
     {
       name: "Les Deux Gamins",
@@ -453,6 +481,7 @@ const AllBusiness: React.FC<Props> = ({ filterValue }) => {
       ratingLimitingCustomers: 5,
       ratingMasks: 3,
       ratingAccomodation: 4,
+      link: "https://www.google.ca/maps/place/Les+Deux+Gamins/@45.51551,-73.5731502,17z/data=!3m1!4b1!4m5!3m4!1s0x4cc91a4aa917670d:0xe462d94879c6cee1!8m2!3d45.5155063!4d-73.5709615",
     },
     {
       name: "Cafe St-Barth",
@@ -467,6 +496,7 @@ const AllBusiness: React.FC<Props> = ({ filterValue }) => {
       ratingLimitingCustomers: 4,
       ratingMasks: 5,
       ratingAccomodation: 4,
+      link: "https://www.google.ca/maps/place/Caf%C3%A9+St-Barth+-+Breakfast/@45.51551,-73.5731502,17z/data=!4m5!3m4!1s0x4cc91a49cebc44db:0xf7131e634c1c5b97!8m2!3d45.5094606!4d-73.5738433",
     },
     {
       name: "Cafe Nocturne",
@@ -481,6 +511,7 @@ const AllBusiness: React.FC<Props> = ({ filterValue }) => {
       ratingLimitingCustomers: 4,
       ratingMasks: 4,
       ratingAccomodation: 3,
+      link: "https://www.google.ca/maps/place/Caf%C3%A9+Nocturne/@45.5135887,-73.5751408,17z/data=!3m1!4b1!4m5!3m4!1s0x4cc91a35814159c9:0x472152a4e7288455!8m2!3d45.513585!4d-73.5729521",
     },
     {
       name: "Milton B",
@@ -495,6 +526,7 @@ const AllBusiness: React.FC<Props> = ({ filterValue }) => {
       ratingLimitingCustomers: 4,
       ratingMasks: 3,
       ratingAccomodation: 4,
+      link: "https://www.google.ca/maps/place/Milton+B+-+Caf%C3%A9t%C3%A9ria+Urbaine/@45.509189,-73.5759159,17z/data=!3m1!4b1!4m5!3m4!1s0x4cc91a49cbd23b2b:0xbaa25ca11a5186c7!8m2!3d45.5091853!4d-73.5737272",
     },
     {
       name: "Juliette & Chocolat",
@@ -509,6 +541,7 @@ const AllBusiness: React.FC<Props> = ({ filterValue }) => {
       ratingLimitingCustomers: 5,
       ratingMasks: 5,
       ratingAccomodation: 4,
+      link: "https://www.google.ca/maps/place/Juliette+%26+Chocolat/@45.5138536,-73.5749529,17z/data=!3m1!4b1!4m5!3m4!1s0x4cc91bb3330dbae3:0x7414726dafe51cd8!8m2!3d45.5138499!4d-73.5727642",
     },
     {
       name: "Le Darling",
@@ -523,6 +556,7 @@ const AllBusiness: React.FC<Props> = ({ filterValue }) => {
       ratingLimitingCustomers: 4,
       ratingMasks: 4,
       ratingAccomodation: 2,
+      link: "https://www.google.ca/maps/place/Le+Darling/@45.5188457,-73.5862597,17z/data=!3m1!4b1!4m5!3m4!1s0x4cc91bd2bc16dba9:0x25420a02fc158b50!8m2!3d45.518842!4d-73.584071",
     },
     {
       name: "La Petite Garconne",
@@ -537,6 +571,7 @@ const AllBusiness: React.FC<Props> = ({ filterValue }) => {
       ratingLimitingCustomers: 4,
       ratingMasks: 5,
       ratingAccomodation: 4,
+      link: "https://www.google.ca/maps/place/La+petite+gar%C3%A7onne+%7C+Jumpsuits+minimalist+fashion+Montreal/@45.5141944,-73.5757361,17z/data=!3m1!4b1!4m5!3m4!1s0x4cc91a3573f42925:0x74c9a7a7266cbced!8m2!3d45.5141907!4d-73.5735474",
     },
     {
       name: "Eva B",
@@ -551,6 +586,7 @@ const AllBusiness: React.FC<Props> = ({ filterValue }) => {
       ratingLimitingCustomers: 5,
       ratingMasks: 4,
       ratingAccomodation: 3,
+      link: "https://www.google.ca/maps/place/Eva+B./@45.5116517,-73.5692517,17z/data=!3m2!4b1!5s0x4cc91a4bf58488ed:0x89011ed4e7dc455d!4m5!3m4!1s0x4cc91a4bf584fa0f:0x29e2151da8a6069c!8m2!3d45.511648!4d-73.567063",
     },
     {
       name: "Renaud Bray",
@@ -565,6 +601,7 @@ const AllBusiness: React.FC<Props> = ({ filterValue }) => {
       ratingLimitingCustomers: 5,
       ratingMasks: 4,
       ratingAccomodation: 4,
+      link: "https://www.google.ca/maps/place/Renaud-Bray/@45.5229807,-73.5832716,17z/data=!3m1!4b1!4m5!3m4!1s0x4cc91bd1e50fb301:0xcc19296b3bd658cf!8m2!3d45.522977!4d-73.581083",
     },
   ];
 

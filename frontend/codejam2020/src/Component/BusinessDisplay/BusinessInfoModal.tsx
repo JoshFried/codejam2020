@@ -6,6 +6,7 @@ import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import CheckIcon from "@material-ui/icons/Check";
+import Link from "@material-ui/core/Link";
 
 interface Props {
   businessInfo: {
@@ -21,6 +22,7 @@ interface Props {
     ratingLimitingCustomers: number;
     ratingMasks: number;
     ratingAccomodation: number;
+    link: string;
   };
 }
 
@@ -51,6 +53,9 @@ const useStyles = makeStyles({
   ratingName: {
     marginTop: "0.5rem",
   },
+  googleMapsLink: {
+    paddingBottom: "30px",
+  }
 });
 
 const BusinessInfoModal: React.FC<Props> = ({ businessInfo }) => {
@@ -89,6 +94,14 @@ const BusinessInfoModal: React.FC<Props> = ({ businessInfo }) => {
 
           <Typography variant="subtitle1" gutterBottom>
             {businessInfo.name + " | " + businessInfo.location}
+          </Typography>
+          <div className={classes.googleMapsLink}>
+            <Link href={businessInfo.link}>
+              Google Maps Link
+            </Link>
+          </div>
+          <Typography variant="body1" gutterBottom>
+            Reviews
           </Typography>
           <div className={classes.ratingBox}>
             <RatingUI rating={businessInfo.ratingSanitizer} />
