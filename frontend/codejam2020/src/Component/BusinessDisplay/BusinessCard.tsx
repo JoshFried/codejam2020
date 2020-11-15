@@ -5,11 +5,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import RatingUI from "../RatingComponent/RatingUI";
 import Modal from "@material-ui/core/Modal";
 import BusinessInfoModal from "./BusinessInfoModal";
-import Card from "@material-ui/core/Card";
-import CardActions from "@material-ui/core/CardActions";
-import CardContent from "@material-ui/core/CardContent";
-import Button from "@material-ui/core/Button";
-import Toolbar from "@material-ui/core/Toolbar";
 
 interface Props {
   businessInfo: {
@@ -19,6 +14,12 @@ interface Props {
     location: string;
     type: string;
     business_id: number;
+    local: boolean;
+    ratingSanitizer: number;
+    ratingSocialDistancing: number;
+    ratingLimitingCustomers: number;
+    ratingMasks: number;
+    ratingAccomodation: number;
   };
 }
 

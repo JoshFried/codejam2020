@@ -2,10 +2,8 @@ import React from "react";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import GridList from "@material-ui/core/GridList";
 import BusinessCard from "./BusinessCard";
-import Searchbox from "../Header/Searchbox";
-import searchValue from "../Header/Searchbox";
 
-interface Props{
+interface Props {
   filterValue: string;
 }
 
@@ -322,13 +320,19 @@ const AllBusiness: React.FC<Props> = ({ filterValue }) => {
   return (
     <div className={classes.root}>
       <GridList cellHeight={200} spacing={1} className={classes.gridList}>
-        {businesses.filter((business) => 
-            business.name.toLowerCase().includes(filterValue.toLowerCase()) || 
-            business.type.toLowerCase().includes(filterValue.toLowerCase()) ||
-            business.rating.toString().includes(filterValue.toLowerCase()))
+        {businesses
+          .filter(
+            (business) =>
+              business.name.toLowerCase().includes(filterValue.toLowerCase()) ||
+              business.type.toLowerCase().includes(filterValue.toLowerCase()) ||
+              business.rating.toString().includes(filterValue.toLowerCase())
+          )
           .map((business, i) => {
-            return <BusinessCard businessInfo={business} key={i}></BusinessCard>
-        })};
+            return (
+              <BusinessCard businessInfo={business} key={i}></BusinessCard>
+            );
+          })}
+        ;
       </GridList>
     </div>
   );
