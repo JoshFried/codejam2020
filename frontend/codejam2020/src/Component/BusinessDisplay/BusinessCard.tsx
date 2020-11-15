@@ -10,6 +10,7 @@ import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import Button from "@material-ui/core/Button";
 import Toolbar from "@material-ui/core/Toolbar";
+import local from "./local.png";
 
 interface Props {
   businessInfo: {
@@ -19,6 +20,7 @@ interface Props {
     location: string;
     type: string;
     business_id: number;
+    local:boolean;
   };
 }
 
@@ -60,6 +62,15 @@ const useStyles = makeStyles({
     alignItems: "center",
     height: "80%",
   },
+  local: {
+    width: "50px",
+    paddingRight: "10px",
+  },
+  topLine: {
+    display: "flex",
+    justifyContent: "space-between",
+    paddingTop: "10px",
+  }
 });
 
 const BusinessCard: React.FC<Props> = ({ businessInfo }) => {
@@ -72,16 +83,21 @@ const BusinessCard: React.FC<Props> = ({ businessInfo }) => {
         className={classes.root}
         onClick={() => setModalIsOpen(businessInfo.business_id)}
       >
-        <Typography className={classes.name} variant="h3" component="h1">
-          {businessInfo.name}
-        </Typography>
+        <div className = {classes.topLine}>
+          <Typography className={classes.name} variant="h3" component="h1">
+            {businessInfo.name}
+          </Typography>
+          <div className={classes.local}>
+            {businessInfo.local ? <img src={local} /> : <></>}
+          </div>
+        </div>
         <Typography className={classes.type} color="textSecondary" gutterBottom>
           {businessInfo.type.toUpperCase().substring(0, 1) +
             businessInfo.type.toLowerCase().substring(1)}
         </Typography>
         <div className={classes.rating}>
           <RatingUI rating={businessInfo.rating} />
-          <div className={classes.ratingtext}>{businessInfo.rating}</div>
+          <div className={classes.ratingtext}>({businessInfo.count})</div>
         </div>
 
         <Typography className={classes.location} color="textSecondary">
