@@ -11,6 +11,8 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import FormGroup from "@material-ui/core/FormGroup";
 import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
+import Logo from "./Logo.jpg";
+import plusSign from "./plussign.jpg";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -23,6 +25,11 @@ const useStyles = makeStyles((theme: Theme) =>
     title: {
       flexGrow: 1,
       textAlign: "left",
+    },
+    logo: {
+      paddingTop: "5px",
+      marginLeft: "-15px",
+      paddingRight: "10px",
     },
   })
 );
@@ -49,9 +56,15 @@ export default function MenuAppBar() {
     <header className={classes.root}>
       <AppBar position="static">
         <Toolbar>
+          <div className={classes.logo}>
+            <img src={Logo}></img>
+          </div>
           <Typography variant="h6" className={classes.title}>
-            COMPANY NAME
+            COSAFE
           </Typography>
+          <div>
+            <img src={plusSign}></img>
+          </div>
           {auth && (
             <div>
               <IconButton
@@ -78,8 +91,9 @@ export default function MenuAppBar() {
                 open={open}
                 onClose={handleClose}
               >
-                <MenuItem onClick={handleClose}>Login</MenuItem>
+                <MenuItem onClick={handleClose}>See Account</MenuItem>
                 <MenuItem onClick={handleClose}>Contact Us</MenuItem>
+                <MenuItem onClick={handleClose}>Log Out</MenuItem>
               </Menu>
             </div>
           )}

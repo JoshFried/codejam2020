@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme: Theme) =>
 
 const Explanation = () => {
   const explanation: String =
-    "Search and rate restaurants, stores, cafes and more...";
+    "Search and rate restaurants, stores, cafes and more about their Covid-19 safety measures";
 
   const classes = useStyles();
   return (
