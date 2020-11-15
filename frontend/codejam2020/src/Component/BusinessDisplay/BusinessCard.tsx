@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import RatingUI from "../RatingComponent/RatingUI";
+import Modal from "@material-ui/core/Modal";
+import BusinessInfoModal from "./BusinessInfoModal";
 import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
@@ -16,6 +18,7 @@ interface Props {
     count: number;
     location: string;
     type: string;
+    business_id: number;
   };
 }
 
@@ -61,25 +64,39 @@ const useStyles = makeStyles({
 
 const BusinessCard: React.FC<Props> = ({ businessInfo }) => {
   const classes = useStyles();
+  const [modalIsOpen, setModalIsOpen] = useState<number | null>(null);
 
   return (
-    <Paper className={classes.root}>
-      <Typography className={classes.name} variant="h3" component="h1">
-        {businessInfo.name}
-      </Typography>
-      <Typography className={classes.type} color="textSecondary" gutterBottom>
-        {businessInfo.type.toUpperCase().substring(0, 1) +
-          businessInfo.type.toLowerCase().substring(1)}
-      </Typography>
-      <div className={classes.rating}>
-        <RatingUI rating={businessInfo.rating} />
-        <div className={classes.ratingtext}>{businessInfo.rating}</div>
-      </div>
+    <div>
+      <Paper
+        className={classes.root}
+        onClick={() => setModalIsOpen(businessInfo.business_id)}
+      >
+        <Typography className={classes.name} variant="h3" component="h1">
+          {businessInfo.name}
+        </Typography>
+        <Typography className={classes.type} color="textSecondary" gutterBottom>
+          {businessInfo.type.toUpperCase().substring(0, 1) +
+            businessInfo.type.toLowerCase().substring(1)}
+        </Typography>
+        <div className={classes.rating}>
+          <RatingUI rating={businessInfo.rating} />
+          <div className={classes.ratingtext}>{businessInfo.rating}</div>
+        </div>
 
-      <Typography className={classes.location} color="textSecondary">
-        {businessInfo.location}
-      </Typography>
-    </Paper>
+        <Typography className={classes.location} color="textSecondary">
+          {businessInfo.location}
+        </Typography>
+      </Paper>
+      <Modal
+        open={modalIsOpen === businessInfo.business_id}
+        onClose={() => {
+          setModalIsOpen(null);
+        }}
+      >
+        <BusinessInfoModal businessInfo={businessInfo} />
+      </Modal>
+    </div>
   );
 };
 
