@@ -20,7 +20,12 @@ interface Props {
     location: string;
     type: string;
     business_id: number;
-    local:boolean;
+    local: boolean;
+    ratingSanitizer: number;
+    ratingSocialDistancing: number;
+    ratingLimitingCustomers: number;
+    ratingMasks: number;
+    ratingAccomodation: number;
   };
 }
 

@@ -1,7 +1,7 @@
 import React from "react";
 import RatingUI from "../RatingComponent/RatingUI";
 import AddRating from "../RatingComponent/AddRating";
-import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 
@@ -12,6 +12,13 @@ interface Props {
     count: number;
     location: string;
     type: string;
+    business_id: number;
+    local: boolean;
+    ratingSanitizer: number;
+    ratingSocialDistancing: number;
+    ratingLimitingCustomers: number;
+    ratingMasks: number;
+    ratingAccomodation: number;
   };
 }
 
@@ -30,6 +37,13 @@ const useStyles = makeStyles({
     width: "20rem",
     height: "20rem",
     padding: "2rem",
+    overflow: "scroll",
+  },
+  ratingBox: {
+    display: "flex",
+  },
+  ratingName: {
+    marginTop: "0.5rem",
   },
 });
 
@@ -45,9 +59,49 @@ const BusinessInfoModal: React.FC<Props> = ({ businessInfo }) => {
           <Typography variant="subtitle1" gutterBottom>
             {businessInfo.name + " | " + businessInfo.location}
           </Typography>
-          <RatingUI rating={businessInfo.rating} />
+          <div className={classes.ratingBox}>
+            <RatingUI rating={businessInfo.ratingSanitizer} />
+            <div className={classes.ratingName}>Hand Sanitizer</div>
+          </div>
+          <div className={classes.ratingBox}>
+            <RatingUI rating={businessInfo.ratingSocialDistancing} />
+            <div className={classes.ratingName}>Social Distancing</div>
+          </div>
+          <div className={classes.ratingBox}>
+            <RatingUI rating={businessInfo.ratingLimitingCustomers} />
+            <div className={classes.ratingName}>Customer Limit</div>
+          </div>
+          <div className={classes.ratingBox}>
+            <RatingUI rating={businessInfo.ratingMasks} />
+            <div className={classes.ratingName}>Mask Wear</div>
+          </div>
+          <div className={classes.ratingBox}>
+            <RatingUI rating={businessInfo.ratingAccomodation} />
+            <div className={classes.ratingName}>Accomodating</div>
+          </div>
+
           <Typography variant="body1">Leave a Review</Typography>
-          <AddRating />
+
+          <div className={classes.ratingBox}>
+            <AddRating />
+            <div className={classes.ratingName}>Hand Sanitizer</div>
+          </div>
+          <div className={classes.ratingBox}>
+            <AddRating />
+            <div className={classes.ratingName}>Social Distancing</div>
+          </div>
+          <div className={classes.ratingBox}>
+            <AddRating />
+            <div className={classes.ratingName}>Customer Limit</div>
+          </div>
+          <div className={classes.ratingBox}>
+            <AddRating />
+            <div className={classes.ratingName}>Mask Wear</div>
+          </div>
+          <div className={classes.ratingBox}>
+            <AddRating />
+            <div className={classes.ratingName}>Accomodating</div>
+          </div>
         </Paper>
       </div>
     </div>
