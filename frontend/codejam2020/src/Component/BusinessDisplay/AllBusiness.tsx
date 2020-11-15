@@ -4,6 +4,12 @@ import GridList from "@material-ui/core/GridList";
 import GridListTile from "@material-ui/core/GridListTile";
 import Grid from "@material-ui/core/Grid";
 import BusinessCard from "./BusinessCard";
+import Searchbox from "../Header/Searchbox";
+import searchValue from "../Header/Searchbox";
+
+interface Props{
+  filterValue: string;
+}
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -28,7 +34,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-const AllBusiness = () => {
+const AllBusiness: React.FC<Props> = ({ filterValue }) => {
   const businesses = [
     {
       name: "Provigo",
@@ -173,12 +179,17 @@ const AllBusiness = () => {
     },
   ];
   const classes = useStyles();
+
   return (
     <div className={classes.root}>
       <GridList cellHeight={200} spacing={1} className={classes.gridList}>
-        {businesses.map((business, i) => {
-          return <BusinessCard businessInfo={business}></BusinessCard>;
-        })}
+        {businesses.filter((business) => 
+            business.name.toLowerCase().includes(filterValue.toLowerCase()) || 
+            business.type.toLowerCase().includes(filterValue.toLowerCase()) ||
+            business.rating.toString().includes(filterValue.toLowerCase()))
+          .map((business, i) => {
+            return <BusinessCard businessInfo={business}></BusinessCard>
+        })};
       </GridList>
     </div>
   );

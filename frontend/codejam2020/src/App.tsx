@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 import Searchbox from "./Component/Header/Searchbox";
 import MenuAppBar from "./Component/Header/MenuAppBar";
@@ -56,9 +56,9 @@ const App = (): JSX.Element => {
           <Searchbox></Searchbox>
           <br></br>
         </div>
-        <div className={classes.businessdisplay}>
-          <AllBusiness />
-        </div>
+        {/* <div className={classes.businessdisplay}>
+          <AllBusiness filterValue={filterValue}></AllBusiness>
+        </div> */}
       </div>
     </div>
   );
