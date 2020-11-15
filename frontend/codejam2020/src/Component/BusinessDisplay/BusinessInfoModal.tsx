@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import RatingUI from "../RatingComponent/RatingUI";
 import AddRating from "../RatingComponent/AddRating";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
+import Button from "@material-ui/core/Button";
+import CheckIcon from "@material-ui/icons/Check";
 
 interface Props {
   businessInfo: {
@@ -39,6 +41,10 @@ const useStyles = makeStyles({
     padding: "2rem",
     overflow: "scroll",
   },
+  titlebox: {
+    display: "flex",
+    justifyContent: "space-between",
+  },
   ratingBox: {
     display: "flex",
   },
@@ -49,13 +55,38 @@ const useStyles = makeStyles({
 
 const BusinessInfoModal: React.FC<Props> = ({ businessInfo }) => {
   const classes = useStyles();
+  const [sanitizeRating, setSanitizeRating] = useState<number | null>(0);
+  const [SocialDistanceRating, setSocialDistanceRating] = useState<
+    number | null
+  >(0);
+  const [CustomerLimitRating, setCustomerLimitRating] = useState<number | null>(
+    0
+  );
+  const [MaskWearRating, setMaskWearRating] = useState<number | null>(0);
+  const [AccomodationRating, setAccomodationRating] = useState<number | null>(
+    0
+  );
+
+  const resetRating = () => {};
+
   return (
     <div className={classes.root}>
       <div>
         <Paper className={classes.paper}>
-          <Typography variant="h6" gutterBottom>
-            Reviews
-          </Typography>
+          <div className={classes.titlebox}>
+            <Typography variant="h6" gutterBottom>
+              Reviews
+            </Typography>
+            {businessInfo.rating > 3 ? (
+              <div>
+                Covid Safe
+                <CheckIcon style={{ color: "green" }} />
+              </div>
+            ) : (
+              <></>
+            )}
+          </div>
+
           <Typography variant="subtitle1" gutterBottom>
             {businessInfo.name + " | " + businessInfo.location}
           </Typography>
@@ -83,25 +114,41 @@ const BusinessInfoModal: React.FC<Props> = ({ businessInfo }) => {
           <Typography variant="body1">Leave a Review</Typography>
 
           <div className={classes.ratingBox}>
-            <AddRating />
+            <AddRating
+              newRatingValue={sanitizeRating}
+              setNewRating={setSanitizeRating}
+            />
             <div className={classes.ratingName}>Hand Sanitizer</div>
           </div>
           <div className={classes.ratingBox}>
-            <AddRating />
+            <AddRating
+              newRatingValue={SocialDistanceRating}
+              setNewRating={setSocialDistanceRating}
+            />
             <div className={classes.ratingName}>Social Distancing</div>
           </div>
           <div className={classes.ratingBox}>
-            <AddRating />
+            <AddRating
+              newRatingValue={CustomerLimitRating}
+              setNewRating={setCustomerLimitRating}
+            />
             <div className={classes.ratingName}>Customer Limit</div>
           </div>
           <div className={classes.ratingBox}>
-            <AddRating />
+            <AddRating
+              newRatingValue={MaskWearRating}
+              setNewRating={setMaskWearRating}
+            />
             <div className={classes.ratingName}>Mask Wear</div>
           </div>
           <div className={classes.ratingBox}>
-            <AddRating />
+            <AddRating
+              newRatingValue={AccomodationRating}
+              setNewRating={setAccomodationRating}
+            />
             <div className={classes.ratingName}>Accomodating</div>
           </div>
+          <Button onClick={resetRating}>Submit</Button>
         </Paper>
       </div>
     </div>
